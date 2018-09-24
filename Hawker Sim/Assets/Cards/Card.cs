@@ -7,6 +7,10 @@ public class Card : MonoBehaviour {
     [TextArea (10,10)]
     public List<string> Descrpitions = new List<string>();
 
+    public CombinationsHolder.Type _TYPE;
+    public int _LEVEL;
+
+    [HideInInspector]
     public bool onAction;
     Action action;
 
@@ -24,9 +28,9 @@ public class Card : MonoBehaviour {
         onAction = false;
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.GetComponent<Action>())
         {
             collision.gameObject.GetComponent<Action>().ActivateRanures();

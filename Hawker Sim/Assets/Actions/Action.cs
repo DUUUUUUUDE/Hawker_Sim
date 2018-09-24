@@ -14,9 +14,14 @@ public class Action : MonoBehaviour {
     {
         foreach (Transform t in GetComponentsInChildren <Transform>(true))
         {
-            if (t != this.transform)
+            if (t.name == "Ranure")
                 ranures.Add(t);
         }
+    }
+
+    public virtual void MakeAction ()
+    {
+
     }
 
     public void ActivateRanures ()
@@ -44,20 +49,30 @@ public class Action : MonoBehaviour {
     {
         if (numberOfCards < ranures.Capacity)
         {
-            card.GetComponent<Rigidbody2D>().isKinematic = true;
             Cards.Add(card);
+
+            float dist = Mathf.Infinity;
+            Transform ranure = null;
+
             foreach (Transform t in ranures)
             {
-                if (!t.GetComponentInChildren<Card>())
+                if (!t.GetComponentInChildren<Card>() && dist > Vector3.Distance(t.position, card.transform.position))
                 {
-                    card.transform.parent = t;
-                    break;
+                    dist = Vector3.Distance(t.position, card.transform.position);
+                    ranure = t;
                 }
             }
-            card.transform.localPosition = Vector3.zero;
-            card.PutOnAction(this);
-            numberOfCards++;
-            Reciving = true;
+
+            if (ranure)
+            {
+                card.GetComponent<Rigidbody2D>().isKinematic = true;
+                card.transform.parent = ranure;
+                card.transform.localPosition = Vector3.zero;
+                card.PutOnAction(this);
+                numberOfCards++;
+                Reciving = true;
+            }
+
         }
     }
 

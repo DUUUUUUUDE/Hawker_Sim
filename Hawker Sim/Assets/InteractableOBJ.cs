@@ -32,9 +32,7 @@ public class InteractableOBJ : MonoBehaviour
 
     public void Awake()
     {
-        GetComponent<BoxCollider2D>().autoTiling = true;
-    }
-    
 
+    }
 
 }
