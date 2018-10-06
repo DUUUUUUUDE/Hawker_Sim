@@ -68,6 +68,16 @@
     <Compile Include="Assets\Scripts\Interactables\Actions\Study.cs" />
     <Compile Include="Assets\Scripts\Interactables\Actions\Talk.cs" />
     <Compile Include="Assets\Scripts\Interactables\Card.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\Event.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\Ingridient.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\Knowledge.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\KnownNPC.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\Location.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\Order.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\Principle.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\Product.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\Vessel.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Cards\VIP.cs" />
     <Compile Include="Assets\Scripts\Interactables\Interactable.cs" />
     <Compile Include="Assets\Scripts\Managers\CombinationDicctionary.cs" />
     <Compile Include="Assets\Scripts\Managers\ManagerCamera.cs" />

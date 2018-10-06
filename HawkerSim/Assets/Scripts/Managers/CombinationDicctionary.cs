@@ -19,17 +19,25 @@ public class CombinationDicctionary : MonoBehaviour {
         InfoNotes,
         Event,
         Ingridient,
-        P_Stone,
-        P_Light,
-        P_Nature,
-        P_Owl,
-        P_Arcana,
-        P_Death,
-        V_Weapon,
-        V_Tool,
-        V_Paper,
-        V_Vial
     }; 
+
+    public enum Principles
+    {
+        Stone,
+        Light,
+        Nature,
+        Owl,
+        Arcana,
+        Death
+    }
+
+    public enum Vessels
+    {
+        Weapon,
+        Tool,
+        Paper,
+        Vial
+    }
 
     public enum Actions
     {

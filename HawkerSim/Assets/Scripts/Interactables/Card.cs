@@ -6,4 +6,9 @@ public class Card : MonoBehaviour {
 
     public CombinationDicctionary.Cards Type;
 
+    protected virtual void Start()
+    {
+        
+    }
+
 }
